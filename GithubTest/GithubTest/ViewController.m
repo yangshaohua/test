@@ -23,6 +23,7 @@
     
     [view loadHTMLString:[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"table.html" ofType:nil] encoding:NSUTF8StringEncoding error:nil] baseURL:nil];
     NSLog(@":");
+      NSLog(@":");
 }
 
 - (void)testCache
