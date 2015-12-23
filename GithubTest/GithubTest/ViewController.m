@@ -22,16 +22,21 @@
     view.backgroundColor = [UIColor redColor];
     [self.view addSubview:view];
     
+   
+
     
-    NSLog(@"1111111");
-    
-    
-    NSLog(@"2222222");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)testCache
+{
+    //测试cache   限制大小  默认的话会把最先加进去的给remove掉 
+    NSCache *cache = [[NSCache alloc] init];
+    cache.countLimit = 5;
+    [cache setObject:@"1" forKey:@"1"];
+    [cache setObject:@"2" forKey:@"2"];
+    [cache setObject:@"3" forKey:@"3"];
+    [cache setObject:@"4" forKey:@"4"];
+    [cache setObject:@"5" forKey:@"5"];
+    [cache setObject:@"6" forKey:@"6"];
 }
-
 @end

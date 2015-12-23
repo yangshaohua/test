@@ -298,6 +298,7 @@
 				75242D741C2A4C6A0009E15E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
