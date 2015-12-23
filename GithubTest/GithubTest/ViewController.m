@@ -23,7 +23,7 @@
     [self.view addSubview:view];
     
    
-
+    NSLog(@"最好是加上去吧。");
     
 }
 
