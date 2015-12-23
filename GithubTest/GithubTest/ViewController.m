@@ -25,6 +25,8 @@
     NSLog(@":");
     
     NSLog(@"11111");
+    
+    NSLog(@"11111");
 }
 
 - (void)testCache
