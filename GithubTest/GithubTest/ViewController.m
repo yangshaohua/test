@@ -17,19 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UIWebView *view = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
     view.backgroundColor = [UIColor redColor];
     [self.view addSubview:view];
     
-   
-    NSLog(@"最好是加上去吧。");
-    
+    [view loadHTMLString:[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"table.html" ofType:nil] encoding:NSUTF8StringEncoding error:nil] baseURL:nil];
 }
 
 - (void)testCache
 {
-    //测试cache   限制大小  默认的话会把最先加进去的给remove掉 
+    //测试cache   限制个数  默认的话会把最先加进去的给remove掉
+    
     NSCache *cache = [[NSCache alloc] init];
     cache.countLimit = 5;
     [cache setObject:@"1" forKey:@"1"];
